@@ -1,0 +1,28 @@
+h3{
+    font-size:25px !important;
+}
+
+.btn-success:hover
+{
+    background-color:rgb(255, 0, 0);
+}
+canvas{
+    animation-name: example;
+    animation-duration:4s;
+    animation-iteration-count: infinite;
+}
+
+.background{
+background-image: url("background.avif");
+background-position: center;
+background-size:cover;
+}
+
+@keyframes example {
+	from, to { box-shadow: 0 0 15px 0 rgb(255, 168, 62) }
+	16% { box-shadow: 0 0 15px 0  rgb(215, 138, 44) }
+	32% { box-shadow: 0 0 15px 0  rgb(162, 106, 36) }
+	48% { box-shadow: 0 0 15px 0  rgb(117, 77, 28) }
+	64% { box-shadow: 0 0 15px 0  rgb(69, 43, 14) }
+	80% { box-shadow: 0 0 15px 0  rgb(29, 20, 5) }
+}
