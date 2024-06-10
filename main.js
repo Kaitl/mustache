@@ -2,6 +2,8 @@ var noseX=0
 var noseY=0
 
 function preload() {
+    mutschach = loadImage('https://i.postimg.cc/GtZmnq75/fancy-moustache-noirty-designs-removebg-preview.png'
+    )
 }
 
 function setup(){
@@ -18,8 +20,10 @@ function setup(){
 function gotPoses(results){
     if(results.length>0){
         console.log(results)
-        console.log("nose x = "+results[0].pose.nose.x)
-        console.log("nose y = "+results[0].pose.nose.y)
+        noseX=results[0].pose.nose.x
+        noseY=results[0].pose.nose.y
+        console.log("nose x = "+noseX)
+        console.log("nose y = "+noseY)
     }
 }
 
@@ -29,6 +33,7 @@ function modelLoaded(){
 
 function draw() {
     image(video, 0, 0, 300, 300)
+    image(mutschach, noseX-150, noseY-120,300,300)
 }
 
 function RAH(){
